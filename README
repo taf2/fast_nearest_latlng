@@ -1,0 +1,11 @@
+find the nearest locations to a given point
+
+
+    floc = FastLoc.new(:unit => :miles) # :kilometers or :nautical_miles
+
+    floc.add(latdeg,lngdeg,3)
+    floc.add(latdeg,lngdeg,4)
+    floc.add(latdeg,lngdeg,5)
+    floc.add(latdeg,lngdeg,6)
+
+    floc.nearest(latdeg,lngdeg) -> [5,3,4,6]
