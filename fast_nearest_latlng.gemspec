@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name    = "fast_nearest_latlng"
   s.authors = ["Todd A. Fisher"]
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.date    = '2012-04-15'
   s.description = %q{Locate the nearest location within a set to a given location}
   s.email   = 'todd.fisher@gmail.com'

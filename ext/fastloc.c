@@ -108,7 +108,10 @@ static VALUE ruby_fast_loc_nearest(VALUE self, VALUE latdeg, VALUE lngdeg) {
   qsort(distances, floc->count, sizeof(ldat), distance_compare);
 
   for (i = 0; i < floc->count; ++i) {
-    rb_ary_push(sorted, rb_int_new(distances[i].id));
+    VALUE result = rb_ary_new2(2);
+    rb_ary_push(result, rb_float_new(distances[i].dist));
+    rb_ary_push(result, rb_int_new(distances[i].id));
+    rb_ary_push(sorted, result);
   }
   return sorted;
 }
